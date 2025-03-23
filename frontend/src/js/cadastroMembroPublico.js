@@ -73,7 +73,7 @@ async function gerarListaIgrejas() {
     try {
         const token = sessionStorage.getItem("access_token");
         const formattedToken = token ? token.replace(/^"+|"+$/g, '') : null;
-        const response = await axios.get('https://back-cadastro-publico-membros-icb.vercel.app/membro_formulario')
+        const response = await axios.get('https://backend-icb-membership.vercel.app/unidades')
 
         const selectElement = document.getElementById("igreja");
         selectElement.innerHTML = '<option value="" disabled selected>Selecione uma igreja</option>';
@@ -114,7 +114,7 @@ async function CadastrarMembroPublico() {
         const posicao = "Membro"
 
         const response = await axios.post(
-            'https://backend-icb-membership.vercel.app/membro_formulario/',
+            'https://backend-icb-membership.vercel.app/membro_formulario',
             {
                 "nome": nome,
                 "email": email,
