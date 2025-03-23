@@ -56,7 +56,10 @@
                 <label class="caixaPqna">
                     Qual a sua igreja?
                     <select id="igreja" name="igreja" required>
-                        <option value="" disabled selected>Selecione uma igreja</option>
+                        <option></option>
+                        <option value="ICB_Fortaleza">ICB_Fortaleza</option>
+                        <option value="ICB_Cascavel">ICB_Cascavel</option>
+                        <option value="ICB_Maranguape">ICB_Maranguape</option>
                     </select>
                 </label>
                 <label class="caixaPqna">
@@ -80,7 +83,8 @@
                 </label>
                 <label class="caixaPqna">
                     cep
-                    <input type="number" id="cep" name="cep" placeholder="Apenas números" maxlength="8" required onblur="buscaCep(this.value)" />
+                    <input type="number" id="cep" name="cep" placeholder="Apenas números" maxlength="8" required
+                        onblur="buscaCep(this.value)" />
                 </label>
                 <label class="caixaGde">
                     Logradouro
